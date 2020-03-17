@@ -1,0 +1,11 @@
+﻿CREATE TABLE [CommCRM].[TRANSIT_STG_PAL_UPSERT]
+(
+	[ELA_Pub_Acct_List__c] [varchar](18) NULL,
+	[ELA_CRM_ID__c] [varchar](10) NULL,
+	[ELA_Member_ID__c] [varchar](50) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)

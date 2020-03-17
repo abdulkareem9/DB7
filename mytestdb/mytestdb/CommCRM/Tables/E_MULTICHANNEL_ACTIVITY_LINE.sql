@@ -1,0 +1,59 @@
+﻿CREATE TABLE [CommCRM].[E_MULTICHANNEL_ACTIVITY_LINE]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[RECORDTYPEID] [nvarchar](18) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[MULTICHANNEL_ACTIVITY_VOD__C] [nvarchar](18) NULL,
+	[CALL_VOD__C] [nvarchar](18) NULL,
+	[CUSTOM_VOD__C] [bit] NULL,
+	[DATETIME_VOD__C] [datetime] NULL,
+	[DEBUG_VOD__C] [bit] NULL,
+	[DETAIL_GROUP_VEXTERNAL_ID_VOD__C] [nvarchar](120) NULL,
+	[DETAIL_GROUP_VOD__C] [nvarchar](18) NULL,
+	[DURATION_VOD__C] [numeric](18, 0) NULL,
+	[EVENT_SUBTYPE_VOD__C] [nvarchar](100) NULL,
+	[EVENT_TYPE_VOD__C] [nvarchar](1000) NULL,
+	[KEY_MESSAGE_VEXTERNAL_ID_VOD__C] [nvarchar](255) NULL,
+	[KEY_MESSAGE_VOD__C] [nvarchar](18) NULL,
+	[MULTICHANNEL_CONTENT_ASSET_ID_VOD__C] [nvarchar](255) NULL,
+	[MULTICHANNEL_CONTENT_ASSET_VERSION_VOD__C] [nvarchar](100) NULL,
+	[MULTICHANNEL_CONTENT_ASSET_VOD__C] [nvarchar](18) NULL,
+	[MULTICHANNEL_CONTENT_VOD__C] [nvarchar](18) NULL,
+	[PRODUCT_VEXTERNAL_ID_VOD__C] [nvarchar](120) NULL,
+	[PRODUCT_VOD__C] [nvarchar](18) NULL,
+	[SENT_EMAIL_VOD__C] [nvarchar](18) NULL,
+	[VEXTERNAL_ID_VOD__C] [nvarchar](255) NULL,
+	[VIDEO_LAST_VIEWED_TIME_VOD__C] [numeric](18, 0) NULL,
+	[VIDEO_LENGTH_VOD__C] [numeric](18, 0) NULL,
+	[VIDEO_TOTAL_TIME_SPENT_VOD__C] [numeric](18, 0) NULL,
+	[VIEW_ORDER_VOD__C] [numeric](18, 0) NULL,
+	[CLM_PRESENTATION_VOD__C] [nvarchar](18) NULL,
+	[ENTITY_REFERENCE_KM_ID_VOD__C] [nvarchar](40) NULL,
+	[KEY_MESSAGE_VERSION_VOD__C] [nvarchar](100) NULL,
+	[MOBILE_ID_VOD__C] [nvarchar](100) NULL,
+	[REACTION_VOD__C] [nvarchar](1000) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

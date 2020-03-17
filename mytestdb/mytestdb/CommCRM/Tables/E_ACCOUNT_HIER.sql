@@ -1,0 +1,16 @@
+﻿CREATE TABLE [CommCRM].[E_ACCOUNT_HIER]
+(
+	[TOP_PARENT_ID] [nvarchar](18) NULL,
+	[TOP_PARENT_NAME] [nvarchar](255) NULL,
+	[PARENT_ID] [nvarchar](18) NULL,
+	[PARENT_NAME] [nvarchar](255) NULL,
+	[ACCOUNT_ID] [nvarchar](18) NULL,
+	[ACCOUNT_NAME] [nvarchar](255) NULL,
+	[FULL_LEVEL] [int] NOT NULL,
+	[FULL_PATH] [nvarchar](4000) NULL
+)
+WITH
+(
+	DISTRIBUTION = HASH ( [ACCOUNT_ID] ),
+	CLUSTERED COLUMNSTORE INDEX
+)

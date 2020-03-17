@@ -1,0 +1,62 @@
+﻿CREATE TABLE [CommCRM].[E_APPROVED_DOCUMENT]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[OWNERID] [nvarchar](18) NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[RECORDTYPEID] [nvarchar](18) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[LASTACTIVITYDATE] [date] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[LASTVIEWEDDATE] [datetime] NULL,
+	[LASTREFERENCEDDATE] [datetime] NULL,
+	[DETAIL_GROUP_VOD__C] [nvarchar](18) NULL,
+	[DOCUMENT_DESCRIPTION_VOD__C] [nvarchar](255) NULL,
+	[DOCUMENT_HOST_URL_VOD__C] [nvarchar](max) NULL,
+	[DOCUMENT_ID_VOD__C] [nvarchar](100) NULL,
+	[DOCUMENT_LAST_MOD_DATETIME_VOD__C] [datetime] NULL,
+	[EMAIL_ALLOWS_DOCUMENTS_VOD__C] [bit] NULL,
+	[EMAIL_DOMAIN_VOD__C] [nvarchar](100) NULL,
+	[EMAIL_FRAGMENT_HTML_VOD__C] [nvarchar](max) NULL,
+	[EMAIL_FROM_ADDRESS_VOD__C] [nvarchar](100) NULL,
+	[EMAIL_FROM_NAME_VOD__C] [nvarchar](100) NULL,
+	[EMAIL_HTML_1_VOD__C] [nvarchar](max) NULL,
+	[EMAIL_HTML_2_VOD__C] [nvarchar](max) NULL,
+	[EMAIL_REPLYTO_ADDRESS_VOD__C] [nvarchar](100) NULL,
+	[EMAIL_REPLYTO_NAME_VOD__C] [nvarchar](100) NULL,
+	[EMAIL_SUBJECT_VOD__C] [nvarchar](max) NULL,
+	[EMAIL_TEMPLATE_FRAGMENT_DOCUMENT_ID_VOD__C] [nvarchar](100) NULL,
+	[EMAIL_TEMPLATE_FRAGMENT_HTML_VOD__C] [nvarchar](max) NULL,
+	[ISI_DOCUMENT_ID_VOD__C] [nvarchar](100) NULL,
+	[LANGUAGE_VOD__C] [nvarchar](1000) NULL,
+	[OTHER_DOCUMENT_ID_LIST_VOD__C] [nvarchar](100) NULL,
+	[PI_DOCUMENT_ID_VOD__C] [nvarchar](100) NULL,
+	[PIECE_DOCUMENT_ID_VOD__C] [nvarchar](100) NULL,
+	[PRODUCT_VOD__C] [nvarchar](18) NULL,
+	[STATUS_VOD__C] [nvarchar](1000) NULL,
+	[TERRITORY_VOD__C] [nvarchar](255) NULL,
+	[VAULT_INSTANCE_ID_VOD__C] [nvarchar](100) NULL,
+	[VAULT_DOCUMENT_ID_VOD__C] [nvarchar](100) NULL,
+	[ELA_GROUP_TO_SHARE_WITH__C] [nvarchar](4000) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

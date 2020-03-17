@@ -1,0 +1,39 @@
+﻿CREATE TABLE [CommCRM].[E_ORDER_MOVE]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[OWNERID] [nvarchar](18) NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[LASTVIEWEDDATE] [datetime] NULL,
+	[LASTREFERENCEDDATE] [datetime] NULL,
+	[ELA_DATE_COMPLETED__C] [datetime] NULL,
+	[ELA_FROM_ORDER_DATE__C] [date] NULL,
+	[ELA_FROM_SHIPPING_METHOD__C] [nvarchar](4000) NULL,
+	[ELA_NUM_ORDERS_MOVED__C] [numeric](18, 0) NULL,
+	[ELA_STATUS__C] [nvarchar](1000) NULL,
+	[ELA_TO_ORDER_DATE__C] [date] NULL,
+	[ELA_TO_SHIPPING_METHOD__C] [nvarchar](1000) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

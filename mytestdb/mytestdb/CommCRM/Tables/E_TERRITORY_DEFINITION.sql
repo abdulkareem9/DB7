@@ -1,0 +1,61 @@
+﻿CREATE TABLE [CommCRM].[E_TERRITORY_DEFINITION]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[OWNERID] [nvarchar](18) NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[LASTVIEWEDDATE] [datetime] NULL,
+	[LASTREFERENCEDDATE] [datetime] NULL,
+	[ELA_BUSINESS_UNIT_OWNER__C] [nvarchar](18) NULL,
+	[ELA_COACHING_DAYS__C] [numeric](18, 0) NULL,
+	[ELA_BUSINESS_UNIT_1__C] [nvarchar](1000) NULL,
+	[ELA_DIVISION__C] [nvarchar](1000) NULL,
+	[ELA_KEY_ACCOUNT__C] [bit] NULL,
+	[ELA_PRIORITY_A__C] [bit] NULL,
+	[ELA_PRIORITY_B__C] [bit] NULL,
+	[ELA_PRIORITY_C__C] [bit] NULL,
+	[ELA_PRIORITY_D__C] [bit] NULL,
+	[ELA_SALES_FORCE__C] [nvarchar](1000) NULL,
+	[ELA_BUSINESS_UNIT_2__C] [nvarchar](1000) NULL,
+	[ELA_DISTRICT__C] [nvarchar](1000) NULL,
+	[ELA_CYCLE_PLAN_TARGET_A__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_B_H__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_B_L__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_B_M__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_C_H__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_C_L__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_C_M__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_D_H__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_D_L__C] [numeric](18, 0) NULL,
+	[ELA_CYCLE_PLAN_TARGET_D_M__C] [numeric](18, 0) NULL,
+	[ELA_BUSINESS_UNIT__C] [nvarchar](4000) NULL,
+	[ELA_FIELD_DAYS__C] [numeric](18, 0) NULL,
+	[ELA_DISTRICT_REGION__C] [nvarchar](30) NULL,
+	[ELA_AVG_DAILY_CALL_TARGET__C] [numeric](18, 0) NULL,
+	[ELA_PCT_COACH_TIME_IN_FIELD__C] [nvarchar](100) NULL,
+	[ELA_PCT_TIME_IN_FIELD__C] [nvarchar](100) NULL,
+	[MOBILE_ID_VOD__C] [nvarchar](100) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)
