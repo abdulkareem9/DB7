@@ -1,0 +1,44 @@
+﻿CREATE TABLE [CommCRM].[E_SYNC_TRACKING]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[OWNERID] [nvarchar](18) NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[MOBILE_ID_VOD__C] [nvarchar](100) NULL,
+	[SYNC_TYPE_VOD__C] [nvarchar](1000) NULL,
+	[SYNC_COMPLETED_DATETIME_VOD__C] [datetime] NULL,
+	[CANCELED_VOD__C] [bit] NULL,
+	[UPLOAD_PROCESSED_VOD__C] [bit] NULL,
+	[DOWNLOAD_PROCESSED_VOD__C] [bit] NULL,
+	[VINSIGHTS_PROCESSED_VOD__C] [bit] NULL,
+	[VERSION_VOD__C] [nvarchar](100) NULL,
+	[SYNC_START_DATETIME_VOD__C] [datetime] NULL,
+	[MEDIA_PROCESSED_VOD__C] [bit] NULL,
+	[NUMBER_OF_RETRIES_VOD__C] [numeric](18, 0) NULL,
+	[NUMBER_OF_UPLOAD_ERRORS_VOD__C] [numeric](18, 0) NULL,
+	[NUMBER_OF_UPLOADS_VOD__C] [numeric](18, 0) NULL,
+	[NUMBER_OF_VTRANS_VOD__C] [numeric](18, 0) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

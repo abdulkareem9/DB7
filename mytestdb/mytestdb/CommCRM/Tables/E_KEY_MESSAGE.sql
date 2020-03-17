@@ -1,0 +1,63 @@
+﻿CREATE TABLE [CommCRM].[E_KEY_MESSAGE]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[OWNERID] [nvarchar](18) NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[LASTVIEWEDDATE] [datetime] NULL,
+	[LASTREFERENCEDDATE] [datetime] NULL,
+	[DESCRIPTION_VOD__C] [nvarchar](max) NULL,
+	[PRODUCT_VOD__C] [nvarchar](18) NULL,
+	[PRODUCT_STRATEGY_VOD__C] [nvarchar](18) NULL,
+	[DISPLAY_ORDER_VOD__C] [numeric](18, 0) NULL,
+	[ACTIVE_VOD__C] [bit] NULL,
+	[CATEGORY_VOD__C] [nvarchar](1000) NULL,
+	[VEHICLE_VOD__C] [nvarchar](255) NULL,
+	[CLM_ID_VOD__C] [nvarchar](100) NULL,
+	[CUSTOM_REACTION_VOD__C] [nvarchar](max) NULL,
+	[SLIDE_VERSION_VOD__C] [nvarchar](100) NULL,
+	[LANGUAGE_VOD__C] [nvarchar](1000) NULL,
+	[MEDIA_FILE_CRC_VOD__C] [nvarchar](255) NULL,
+	[MEDIA_FILE_NAME_VOD__C] [nvarchar](255) NULL,
+	[MEDIA_FILE_SIZE_VOD__C] [numeric](18, 0) NULL,
+	[SEGMENT_VOD__C] [nvarchar](80) NULL,
+	[DETAIL_GROUP_VOD__C] [nvarchar](18) NULL,
+	[DISABLE_ACTIONS_VOD__C] [nvarchar](4000) NULL,
+	[ELA_GROUP_TO_SHARE_WITH__C] [nvarchar](4000) NULL,
+	[CDN_PATH_VOD__C] [nvarchar](255) NULL,
+	[VEXTERNAL_ID_VOD__C] [nvarchar](255) NULL,
+	[STATUS_VOD__C] [nvarchar](1000) NULL,
+	[VAULT_DNS_VOD__C] [nvarchar](255) NULL,
+	[VAULT_DOC_ID_VOD__C] [nvarchar](100) NULL,
+	[VAULT_EXTERNAL_ID_VOD__C] [nvarchar](255) NULL,
+	[VAULT_GUID_VOD__C] [nvarchar](255) NULL,
+	[VAULT_LAST_MODIFIED_DATE_TIME_VOD__C] [datetime] NULL,
+	[ELA_REPORTING_NAME__C] [nvarchar](80) NULL,
+	[IS_SHARED_RESOURCE_VOD__C] [bit] NULL,
+	[SHARED_RESOURCE_VOD__C] [nvarchar](18) NULL,
+	[IOS_VIEWER_VOD__C] [nvarchar](1000) NULL,
+	[ELA_EXPIRATION_DATE__C] [date] NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

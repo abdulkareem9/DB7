@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>mytestdb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{9a7550ea-45e7-4411-a0cb-c4ea4343ab5f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlDwDatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>mytestdb</RootNamespace>
+    <AssemblyName>mytestdb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="CommCRM\" />
+    <Folder Include="CommCRM\Tables\" />
+    <Folder Include="CommCRMConfig\" />
+    <Folder Include="CommCRMConfig\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="CommCRM\Stored Procedures\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="CommCRM\Tables\E_ACCOUNT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNTSHARE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_bak2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_HIER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_MERGE_HISTORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_PLAN.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_SYSTEM_DATA.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_TACTIC.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_TEAM_MEMBER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ACCOUNT_TERR_LOADER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ADDRESS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ADD_PROFILE_DATA.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ADD_PROFILE_DATA_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_AFFILIATION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ALERT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ALERT_PROFILE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ALERT_USER_ACTION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_APPROVED_DOCUMENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_APPROVED_DOCUMENT_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ATTACHMENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_BUSINESS_UNIT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_BUSINESS_UNIT_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALENDAR.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL2_DETAIL.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL2_DISCUSSION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL2_KEY_MESSAGE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL2_SAMPLE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL2_SAMPLE_CANCEL.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL_CLICKSTREAM.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL_OBJECTIVE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CALL_TEMPLATE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CAMPAIGN.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CAMPAIGN_TARGET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CASE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CHILD_ACCOUNT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CLM_PRESENTATION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CLM_PRESENTATION_SLIDE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_COACHING_REPORT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_COACHING_REPORT_SHARE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CONSENT_HEADER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CONSENT_LINE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CONSENT_TEMPLATE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CONSENT_TYPE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CONTENT_DEPLOYMENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CONTENT_TYPE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_COUNTRY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CUST_IDENTIFIER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CUST_IDENTIFIER_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CYCLE_PLAN.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_CYCLE_PLAN_TARGET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DATA_CHANGE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DATA_CHANGE_REQUEST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DATA_CHANGE_REQUEST_LINE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DATA_REVIEW.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DEAL.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DEAL_DEFINITION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DEAL_DEFINITION_PROD.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_DISTRIBUTION_LIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_EMAIL_ACTIVITY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_EMAIL_ACTIVITY_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_EVENT_ATTENDEE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_FEED_ASSAY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_FEED_ASSAY_CA.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_FEED_ASSAY_CA_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_FEED_BUDGET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_FEED_BUDGET_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_GROUP.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_GROUPMEMBER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_INVENTORY_MONITORING.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_INVENTORY_MONITORING_LINE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_INVENTORY_ORDER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_INVENTORY_ORDER_ALLOCATION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_INVENTORY_ORDER_LINE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_KEY_MESSAGE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_KEY_STAKEHOLDER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_LOGINHISTORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_LOT_CATALOG.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MEDICAL_EVENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MULTICHANNEL_ACTIVITY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MULTICHANNEL_ACTIVITY_LINE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MULTICHANNEL_CONSENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MULTICHANNEL_CONTENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MULTICHANNEL_CONTENT_ASSET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MULTICHANNEL_MESSAGE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MULTICHANNEL_ROUTE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_MY_SETUP_PRODUCTS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_NOTE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ORDER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ORDER_ADJUSTMENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ORDER_CAMPAIGN.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ORDER_LINE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ORDER_MOVE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_ORDER_REL_SNAPSHOT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PRICING_RULE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PRODUCT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PRODUCT_ALIGNMENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PRODUCT_GROUP.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PRODUCT_IDENTIFIER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PRODUCT_METRICS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PRODUCT_METRICS_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PROFILE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PUB_ACCNT_LIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_PUB_ACCNT_LIST_MEMBER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_QUESTION_RESPONSE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_QUEUESOBJECT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_REACH_FREQUENCY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_REACH_FREQUENCY_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_RECORDTYPE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_REPORT_CALL_TARGET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_RETAIL_PROD_INFO.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_RETAIL_PROD_INFO_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SALES_PRODUCT_SUMMARY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SALES_TARGET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SALES_TRANSACTION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SAMPLE_INVENTORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SAMPLE_INVENTORY_ITEM.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SAMPLE_LOT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SAMPLE_RECEIPT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SAMPLE_TRANSACTION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SENT_EMAIL.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SENT_EMAIL_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SENT_FRAGMENT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SENT_FRAGMENT_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SFE_METRIC.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SHARPS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SITE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SPECIES_SPLIT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SPECIES_SPLIT_HIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_STATE_PROVINCE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SUGGESTION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SUGGESTION_FEEDBACK.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SUGGESTION_TAG.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SURVEY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SURVEY_QUESTION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SURVEY_TARGET.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_SYNC_TRACKING.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TERRITORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TERRITORY_ASSIGN_RULES.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TERRITORY_DEFINITION.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TERRITORY_HIER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TIME_OFF_TERRITORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TRANSIT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TRANSIT_HISTORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TRANSIT_SCHEDULE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_TSF.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_UNIT_PRICE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_UNSUBSCRIBE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_UNSUBSCRIBE_PRODUCT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_USER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_USERROLE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_USERTERRITORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\E_USER_IDENTIFIER.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\L_ACCOUNT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\PROCESS_MONITOR.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TRANSIT_E_VFC_IN_DATACUSTOMER_EXT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TRANSIT_MULTICHANNEL_LOAD_HISTORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TRANSIT_STG_MULTICHANNEL_ACTIVITY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TRANSIT_STG_PAL_DELETE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TRANSIT_STG_PAL_UPSERT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TRANSIT_STG_SUGGESTIONS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TRANSIT_SUGGESTIONS_LOAD_HISTORY.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Tables\TST_E_ACCOUNT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\CFG_DATATYPE_MAPPING.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\CFG_SFDC_EXTRACTS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\CFG_TERR_MGMT_BUS_UNIT.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\CFG_TERR_MGMT_DIV.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\CFG_TERR_MGMT_SPHERE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\DATAEXTRACT_FILE_LIST.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\DATAEXTRACT_FILE_LIST_bak09jan.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\ELA_PARAMS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRMConfig\Tables\E_ORDER_SEND_LOG.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="CommCRM\Stored Procedures\CLEANUP_EXPIRED_RECORDS.sql" />
+    <Build Include="CommCRM\Stored Procedures\CREATE_TEMP_METADATA_STG_TABLE.sql" />
+    <Build Include="CommCRM\Stored Procedures\DBR_EXTRACT_CREATE_STG_TABLE.sql" />
+    <Build Include="CommCRM\Stored Procedures\DBR_EXTRACT_MANAGE_FILE_ENTRY.sql" />
+    <Build Include="CommCRM\Stored Procedures\DBR_EXTRACT_MERGE_DATA.sql" />
+    <Build Include="CommCRM\Stored Procedures\DBR_UPDATEOLD_DATA.sql" />
+    <Build Include="CommCRM\Stored Procedures\EXTRACT_CREATE_STG_TABLE.sql" />
+    <Build Include="CommCRM\Stored Procedures\EXTRACT_GET_SFDC_FIELD_LIST.sql" />
+    <Build Include="CommCRM\Stored Procedures\EXTRACT_MANAGE_FILE_ENTRY.sql" />
+    <Build Include="CommCRM\Stored Procedures\EXTRACT_MERGE_DATA.sql" />
+    <Build Include="CommCRM\Stored Procedures\EXTRACT_UPDATE_LAST_EXTRACT_DATE.sql" />
+    <Build Include="CommCRM\Stored Procedures\METADATA_SYNC_FIELDS.sql" />
+    <Build Include="CommCRM\Stored Procedures\RESET_CRM_DATA_ENVIRONMENT.sql" />
+    <Build Include="CommCRM\Stored Procedures\TEST_METADATA_SYNC_FIELDS.sql" />
+    <Build Include="CommCRM\Stored Procedures\WORKING_TABLES.sql" />
+    <Build Include="Security\CommCRM.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+    <Build Include="Security\CommCRMConfig.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Build>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mytestdb.publish.xml" />
+  </ItemGroup>
+</Project>

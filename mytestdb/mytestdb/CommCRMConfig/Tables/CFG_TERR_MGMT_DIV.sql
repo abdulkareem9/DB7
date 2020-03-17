@@ -1,0 +1,14 @@
+﻿CREATE TABLE [CommCRMConfig].[CFG_TERR_MGMT_DIV]
+(
+	[DIVISION] [varchar](255) NOT NULL,
+	[AUTO_ALIGN] [varchar](1) NOT NULL,
+	[PERSON_FLG] [varchar](1) NOT NULL,
+	[MFD_FLG] [varchar](1) NOT NULL,
+	[TH_FLG] [varchar](1) NOT NULL,
+	[SPHERE_FLG] [varchar](1) NOT NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)

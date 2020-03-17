@@ -1,0 +1,16 @@
+﻿CREATE TABLE [CommCRM].[TRANSIT_E_VFC_IN_DATACUSTOMER_EXT]
+(
+	[CUSTOMER_ID] [nvarchar](12) NULL,
+	[CUSTOMER_NAME] [nvarchar](255) NULL,
+	[PHY_STREET_ADDR] [nvarchar](80) NULL,
+	[PHY_CITY] [nvarchar](50) NULL,
+	[PHY_STATE] [nvarchar](2) NULL,
+	[PHY_ZIP_CODE] [nvarchar](5) NULL,
+	[PHY_COUNTRY] [nvarchar](2) NULL,
+	[URL] [nvarchar](115) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)

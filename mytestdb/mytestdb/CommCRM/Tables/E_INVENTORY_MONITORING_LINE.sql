@@ -1,0 +1,44 @@
+﻿CREATE TABLE [CommCRM].[E_INVENTORY_MONITORING_LINE]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[INVENTORY_MONITORING_VOD__C] [nvarchar](18) NULL,
+	[CONSUMER_PRICE_VOD__C] [nvarchar](100) NULL,
+	[FACINGS_HORIZONTAL_VOD__C] [numeric](18, 0) NULL,
+	[FACINGS_SIMPLE_VOD__C] [numeric](18, 0) NULL,
+	[FACINGS_VERTICAL_VOD__C] [numeric](18, 0) NULL,
+	[INVENTORY_VOD__C] [numeric](18, 0) NULL,
+	[LAYER_VOD__C] [nvarchar](1000) NULL,
+	[MOBILE_ID_VOD__C] [nvarchar](100) NULL,
+	[MOVED_GOODS_VOD__C] [numeric](18, 0) NULL,
+	[POSITION_VOD__C] [nvarchar](1000) NULL,
+	[PRODUCT_VOD__C] [nvarchar](18) NULL,
+	[U_M_VOD__C] [nvarchar](100) NULL,
+	[USER_MODIFIED_VOD__C] [bit] NULL,
+	[ADDED_FROM_PHOTO_VOD__C] [numeric](18, 0) NULL,
+	[ELA_EXPIRATION_DATE__C] [date] NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

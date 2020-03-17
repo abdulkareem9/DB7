@@ -1,0 +1,45 @@
+﻿CREATE TABLE [CommCRM].[E_SHARPS]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[RECORDTYPEID] [nvarchar](18) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[ELA_ACCOUNT__C] [nvarchar](18) NULL,
+	[ELA_CONTAINERS_SHIPPED__C] [numeric](18, 0) NULL,
+	[ELA_EXTERNAL_ID__C] [nvarchar](255) NULL,
+	[ELA_LAST_CONTAINER_SHIP_DT__C] [date] NULL,
+	[ELA_LAST_KIT_RECEIPT_DATE__C] [date] NULL,
+	[ELA_LAST_KIT_SHIP_DATE__C] [date] NULL,
+	[ELA_MAIL_BACK_KIT_ASGNMT__C] [nvarchar](50) NULL,
+	[ELA_NEXT_CONTAINER_SHIP_DT__C] [date] NULL,
+	[ELA_NEXT_PICKUP_DATE__C] [date] NULL,
+	[ELA_OUTSTANDING_SHIPMENTS__C] [numeric](18, 0) NULL,
+	[ELA_PICK_UP_FREQ__C] [numeric](18, 0) NULL,
+	[ELA_PROGRAM_STATUS__C] [nvarchar](1000) NULL,
+	[ELA_SHIPMENT_STATUS__C] [nvarchar](30) NULL,
+	[ELA_WASTE_CUST_ID__C] [nvarchar](50) NULL,
+	[ELA_WASTE_SITE_ID__C] [nvarchar](50) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

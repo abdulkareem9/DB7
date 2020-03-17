@@ -1,0 +1,62 @@
+﻿CREATE TABLE [CommCRM].[E_PRICING_RULE]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[OWNERID] [nvarchar](18) NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[RECORDTYPEID] [nvarchar](18) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[LASTVIEWEDDATE] [datetime] NULL,
+	[LASTREFERENCEDDATE] [datetime] NULL,
+	[ACCOUNT_GROUP_VOD__C] [nvarchar](80) NULL,
+	[ACCOUNT_VOD__C] [nvarchar](18) NULL,
+	[ACTIVE_VOD__C] [bit] NULL,
+	[EXTERNAL_ID_VOD__C] [nvarchar](255) NULL,
+	[LIST_PRICE_VOD__C] [nvarchar](100) NULL,
+	[NET_PRICE_VOD__C] [nvarchar](100) NULL,
+	[PRODUCT_VOD__C] [nvarchar](18) NULL,
+	[QUANTITY_MAX_VOD__C] [numeric](18, 0) NULL,
+	[QUANTITY_MIN_VOD__C] [numeric](18, 0) NULL,
+	[RULE_DESCRIPTION_VOD__C] [nvarchar](max) NULL,
+	[START_DATE_VOD__C] [date] NULL,
+	[SUGGESTION_TEXT_VOD__C] [nvarchar](max) NULL,
+	[SUGGESTION_THRESHOLD_VOD__C] [numeric](18, 0) NULL,
+	[ORDER_CAMPAIGN_VOD__C] [nvarchar](18) NULL,
+	[DISCOUNT_OVERRIDE_VOD__C] [nvarchar](100) NULL,
+	[COMPARISON_TYPE_VOD__C] [nvarchar](1000) NULL,
+	[END_DATE_VOD__C] [date] NULL,
+	[LIMIT_BOUND_VOD__C] [bit] NULL,
+	[DISCOUNT_OVERRIDE_MAX_VOD__C] [nvarchar](100) NULL,
+	[NET_PRICE_MIN_VOD__C] [nvarchar](100) NULL,
+	[FREE_GOODS_VOD__C] [numeric](18, 0) NULL,
+	[FREE_GOODS_MAX_VOD__C] [numeric](18, 0) NULL,
+	[PRICING_GROUP_VOD__C] [nvarchar](18) NULL,
+	[COMPARISON_PRODUCT_VOD__C] [nvarchar](18) NULL,
+	[CROSS_PRODUCT_RULE_VOD__C] [bit] NULL,
+	[PRODUCT_COMPARISON_TYPE_VOD__C] [nvarchar](1000) NULL,
+	[PRODUCT_MAXIMUM_VOD__C] [numeric](18, 0) NULL,
+	[PRODUCT_MINIMUM_VOD__C] [numeric](18, 0) NULL,
+	[ELA_EXTERNAL_SYSTEM_KEY__C] [nvarchar](255) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)

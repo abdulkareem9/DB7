@@ -1,0 +1,37 @@
+﻿CREATE TABLE [CommCRM].[E_REACH_FREQUENCY]
+(
+	[TABLE_ROWID] [int] IDENTITY(1,1) NOT NULL,
+	[ID] [nvarchar](18) NULL,
+	[CURRENT_ROW] [int] NULL,
+	[START_DATE] [date] NULL,
+	[EXPIRED_DATE] [date] NULL,
+	[CREATED_BY] [nvarchar](1000) NULL,
+	[CREATED_DATE] [datetime] NULL,
+	[UPDATED_BY] [nvarchar](1000) NULL,
+	[UPDATED_DATE] [datetime] NULL,
+	[ISDELETED] [bit] NULL,
+	[NAME] [nvarchar](80) NULL,
+	[CREATEDDATE] [datetime] NULL,
+	[CREATEDBYID] [nvarchar](18) NULL,
+	[LASTMODIFIEDDATE] [datetime] NULL,
+	[LASTMODIFIEDBYID] [nvarchar](18) NULL,
+	[SYSTEMMODSTAMP] [datetime] NULL,
+	[MAYEDIT] [bit] NULL,
+	[ISLOCKED] [bit] NULL,
+	[LASTVIEWEDDATE] [datetime] NULL,
+	[LASTREFERENCEDDATE] [datetime] NULL,
+	[ELA_BUSINESS_UNIT__C] [nvarchar](1000) NULL,
+	[ELA_EXTERNAL_ID__C] [nvarchar](80) NULL,
+	[ELA_FREQUENCY_TARGET__C] [numeric](18, 0) NULL,
+	[ELA_PRIORITY__C] [nvarchar](1000) NULL,
+	[ELA_REACH_TARGET__C] [numeric](18, 0) NULL,
+	[ELA_TERRITORY__C] [nvarchar](18) NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED INDEX
+	(
+		[ID] ASC
+	)
+)
