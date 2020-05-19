@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageAccounts_btaze1iecrmsa01_name": {
-            "defaultValue": "btaze1iecrmsa01",
+            "defaultValue": "bdazelibcrmsa01",
             "type": "String"
         }
     },
@@ -15,11 +15,10 @@
             "name": "[parameters('storageAccounts_btaze1iecrmsa01_name')]",
             "location": "eastus",
             "tags": {
-                "app-name": "ElancoCORE Elanco Connect",
+                "app-name": "ElancoCORE Bison Connect",
                 "business-unit": "Commercial",
-                "environment": "Test",
-                "originating-request-number": "RITM0010595",
-                "project-code": "ECRM"
+                "environment": "Dev",
+                    "project-code": "BCRM"
             },
             "sku": {
                 "name": "Standard_RAGRS",
