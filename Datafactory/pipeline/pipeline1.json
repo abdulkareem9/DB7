@@ -1,0 +1,25 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://management.azure.com/subscriptions/c1c48ae0-59f9-457a-b1fa-3e55585bdd4f/resourceGroups/RG_Commercial_ECRM_NODELETE/providers/ Microsoft.DataFactory/factories/rgcommadf/integrationRuntimes/AutoResolveIntegrationRuntime/getStatus?api-version=2018-06-01",
+					"method": "GET"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
